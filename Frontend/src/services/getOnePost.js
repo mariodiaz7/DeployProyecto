@@ -1,6 +1,8 @@
+const BaseURL= import.meta.env.VITE_API_URL;
+
 const getOnePost = async (postId, jwt) => {
   try {
-    const response = await fetch(`http://localhost:3501/api/post/${postId}`, {
+    const response = await fetch(`${BaseURL}/post/${postId}`, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
