@@ -1,6 +1,8 @@
+const BaseURL= import.meta.env.VITE_API_URL;
+
 const getPosts = async () => {
     try {
-      const response = await fetch('http://localhost:3501/api/post');
+      const response = await fetch(`${BaseURL}/post`);
       
       if (!response.ok) {
         const errorResponse = await response.json();
